@@ -60,7 +60,7 @@ npm i WrathChaos/react-native-dynamic-vector-icons#expo
 ###### IMPORTANT! You need install them.
 
 ```js
-"react-native-spinkit": ">= 1.5.0",
+"react-native-animated-spinkit": "^1.4.1",
 "@freakycoder/react-native-bounceable": ">= 0.2.2",
 ```
 
@@ -182,7 +182,7 @@ export default class Test extends Component {
 | placeholder           |   string   | "Search here..." | set your own placeholder string                                          |
 | spinnerColor          |   color    |     #fdfdfd      | change the spinner color                                                 |
 | spinnerSize           |   number   |     default      | change the spinner size                                                  |
-| spinnerType           |   string   |      Circle      | change the spinner type                                                  |
+| SpinnerType           | component  |      Circle      | change the spinner type                                                  |
 | spinnerVisibility     |  boolean   |      false       | change the spinner visibility                                            |
 
 ## Expo Compatibility

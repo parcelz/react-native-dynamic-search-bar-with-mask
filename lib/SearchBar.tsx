@@ -1,6 +1,5 @@
 import * as React from "react";
 import {
-  Text,
   View,
   Image,
   TextInput,
@@ -10,7 +9,7 @@ import {
   TextInputProps,
   TouchableWithoutFeedbackProps,
 } from "react-native";
-import Spinner from 'react-native-animated-spinkit'
+import { Circle } from "react-native-animated-spinkit";
 import RNBounceable from "@freakycoder/react-native-bounceable";
 /**
  * ? Local Imports
@@ -31,7 +30,7 @@ export interface ISearchBarProps
   darkMode?: boolean;
   placeholder?: string;
   ImageComponent?: any;
-  spinnerType?: string;
+  SpinnerType?: any;
   spinnerSize?: number;
   spinnerColor?: string;
   spinnerVisibility?: boolean;
@@ -76,19 +75,16 @@ export default class SearchBar extends React.Component<
     const {
       darkMode = false,
       spinnerSize = 15,
-      spinnerType = "FadingCircleAlt",
+      SpinnerType = Circle,
       spinnerColor = darkMode ? "#fdfdfd" : "#19191a",
       spinnerVisibility = false,
     } = this.props;
     return (
-      <View style={styles.spinnerContainer}>
-        <Spinner
-          size={spinnerSize}
-          type={spinnerType}
-          color={spinnerColor}
-          isVisible={spinnerVisibility}
-        />
-      </View>
+      spinnerVisibility && (
+        <View style={styles.spinnerContainer}>
+          <SpinnerType size={spinnerSize} color={spinnerColor} />
+        </View>
+      )
     );
   };
 
