@@ -57,7 +57,7 @@ npm i WrathChaos/react-native-dynamic-vector-icons#expo
 
 ## Peer Dependencies
 
-###### IMPORTANT! You need install them.
+###### IMPORTANT! You need install them
 
 ```js
 "react-native-animated-spinkit": "^1.4.1",
