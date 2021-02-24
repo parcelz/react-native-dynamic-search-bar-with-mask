@@ -16,14 +16,20 @@
   </a>
 </p>
 
-<p align="center">
-<img alt="React Native Dynamic Search Bar" src="assets/Screenshots/RN-Dynamic-SearchBar.gif" />
-<img alt="React Native Dynamic Search Bar" src="assets/Screenshots/RN-Dynamic-SearchBar.png" height="800" />
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <img alt="React Native Dynamic Search Bar" src="assets/Screenshots/RN-Dynamic-SearchBar.gif" />
+    </td>
+    <td align="center">
+    <img alt="React Native Dynamic Search Bar" src="assets/Screenshots/RN-Dynamic-SearchBar.png" height="800" />
+    </td>
+   </tr>
+</table>
 
 <h1 align="center"> Built-in Spinner </h1>
-<p align="center">
-<img alt="React Native Dynamic Search Bar" src="assets/Screenshots/RN-Dynamic-Search-Bar-Spinner.gif" />
+  <p align="center">
+  <img alt="React Native Dynamic Search Bar" src="assets/Screenshots/RN-Dynamic-Search-Bar-Spinner.gif" />
 </p>
 
 # Version 2.0 🥳
