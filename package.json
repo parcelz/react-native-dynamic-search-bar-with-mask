@@ -33,8 +33,7 @@
     "postversion": "git push && git push --tags"
   },
   "peerDependencies": {
-    "@freakycoder/react-native-bounceable": ">= 0.2.2",
-    "react-native-spinkit": ">= 1.5.0"
+   
   },
   "devDependencies": {
     "@react-native-community/eslint-config": "^2.0.0",
@@ -60,6 +59,8 @@
     ]
   },
   "dependencies": {
-    "react-native-text-input-mask": "^3.1.4"
+    "@freakycoder/react-native-bounceable": ">= 0.2.2",
+    "react-native-spinkit": ">= 1.5.0",
+    "react-native-masked-text": "^1.13.0"
   }
 }
