@@ -12,6 +12,7 @@ import {
 } from "react-native";
 import Spinner from "react-native-spinkit";
 import RNBounceable from "@freakycoder/react-native-bounceable";
+import {IMaskNativeMixin} from 'react-native-imask';
 /**
  * ? Local Imports
  */
@@ -30,6 +31,7 @@ export interface ISearchBarProps
     TextInputProps {
   darkMode?: boolean;
   placeholder?: string;
+  mask?: string;
   ImageComponent?: any;
   spinnerType?: string;
   spinnerSize?: number;
@@ -84,6 +86,7 @@ export default class SearchBar extends React.Component<
       <View style={styles.spinnerContainer}>
         <Spinner
           size={spinnerSize}
+          // @ts-ignore
           type={spinnerType}
           color={spinnerColor}
           isVisible={spinnerVisibility}
@@ -116,21 +119,29 @@ export default class SearchBar extends React.Component<
 
   renderTextInput = () => {
     const {
+      mask,
       onBlur,
       onFocus,
       textInputStyle,
       darkMode = false,
       placeholder = "Search here...",
     } = this.props;
+
+    const InputComponent = <TextInput
+      placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"}
+      {...this.props}
+      onBlur={onBlur}
+      onFocus={onFocus}
+      ref={(ref) => (this.inputRef = ref)}
+      style={[_textInputStyle(darkMode), textInputStyle]}
+      placeholder={placeholder}
+    />
+
+    const IMaskTextInput = IMaskNativeMixin(InputComponent);
+    
     return (
-      <TextInput
-        placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"}
-        {...this.props}
-        onBlur={onBlur}
-        onFocus={onFocus}
-        ref={(ref) => (this.inputRef = ref)}
-        style={[_textInputStyle(darkMode), textInputStyle]}
-        placeholder={placeholder}
+      <IMaskTextInput
+        mask={mask}
       />
     );
   };

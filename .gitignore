@@ -8,7 +8,7 @@ node_modules
 
 # Xcode
 #
-build/
+# build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -28,7 +28,7 @@ project.xcworkspace
 
 # Android/IntelliJ
 #
-build/
+# build/
 .idea
 .gradle
 local.properties
