@@ -131,9 +131,14 @@
         "signature": "6e1c6f7fb7bb235b8bbe5e81b354a50dceed6b1a1c958886daee0de7bdf97dfa",
         "affectsGlobalScope": false
       },
+      "../../node_modules/react-native-masked-text/index.d.ts": {
+        "version": "49324857a6886198a3546f71377b4c1e85e8b8de7125d43eae212554376773be",
+        "signature": "49324857a6886198a3546f71377b4c1e85e8b8de7125d43eae212554376773be",
+        "affectsGlobalScope": false
+      },
       "../../lib/searchbar.tsx": {
-        "version": "ce728d6ca87fcde9856e56d8590286ffc6de414aa0d81435f173911b6ed0c393",
-        "signature": "9e94ef37f9eccc9deeddd8de38ee07d00a906a0ff471f90b6cd154019e1eac9b",
+        "version": "3253aa04e7b8e145172117742cf36f73ee627379eb60d5b2b321bf6d388c4ef0",
+        "signature": "ce5add6044c152f3f67b2ab76fafc8f3434958ea3be243af2d882a49b0831223",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/eslint-visitor-keys/index.d.ts": {
@@ -192,6 +197,7 @@
         "../../node_modules/@freakycoder/react-native-bounceable/build/dist/rnbounceable.d.ts",
         "../../node_modules/@types/react-native/index.d.ts",
         "../../node_modules/@types/react/index.d.ts",
+        "../../node_modules/react-native-masked-text/index.d.ts",
         "../../node_modules/react-native-spinkit/index.d.ts",
         "../../node_modules/tslib/tslib.d.ts"
       ],
@@ -219,6 +225,10 @@
         "../../node_modules/@types/scheduler/tracing.d.ts",
         "../../node_modules/csstype/index.d.ts"
       ],
+      "../../node_modules/react-native-masked-text/index.d.ts": [
+        "../../node_modules/@types/react-native/index.d.ts",
+        "../../node_modules/@types/react/index.d.ts"
+      ],
       "../../node_modules/react-native-spinkit/index.d.ts": [
         "../../node_modules/@types/react-native/index.d.ts",
         "../../node_modules/@types/react/index.d.ts"
@@ -230,7 +240,8 @@
       ],
       "../../lib/searchbar.tsx": [
         "../../node_modules/@types/react-native/index.d.ts",
-        "../../node_modules/@types/react/index.d.ts"
+        "../../node_modules/@types/react/index.d.ts",
+        "../../node_modules/react-native-masked-text/index.d.ts"
       ],
       "../../node_modules/@freakycoder/react-native-bounceable/build/dist/rnbounceable.d.ts": [
         "../../node_modules/@types/react-native/index.d.ts",
@@ -256,6 +267,10 @@
         "../../node_modules/@types/scheduler/tracing.d.ts",
         "../../node_modules/csstype/index.d.ts"
       ],
+      "../../node_modules/react-native-masked-text/index.d.ts": [
+        "../../node_modules/@types/react-native/index.d.ts",
+        "../../node_modules/@types/react/index.d.ts"
+      ],
       "../../node_modules/react-native-spinkit/index.d.ts": [
         "../../node_modules/@types/react-native/index.d.ts",
         "../../node_modules/@types/react/index.d.ts"
@@ -280,6 +295,7 @@
       "../../node_modules/@types/scheduler/index.d.ts",
       "../../node_modules/@types/scheduler/tracing.d.ts",
       "../../node_modules/csstype/index.d.ts",
+      "../../node_modules/react-native-masked-text/index.d.ts",
       "../../node_modules/react-native-spinkit/index.d.ts",
       "../../node_modules/tslib/tslib.d.ts",
       "../../node_modules/typescript/lib/lib.es2015.collection.d.ts",

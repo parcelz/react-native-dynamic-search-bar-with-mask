@@ -1,6 +1,5 @@
 import * as React from "react";
 import {
-  Text,
   View,
   Image,
   TextInput,
@@ -12,7 +11,7 @@ import {
 } from "react-native";
 import Spinner from "react-native-spinkit";
 import RNBounceable from "@freakycoder/react-native-bounceable";
-import {IMaskNativeMixin} from 'react-native-imask';
+import { TextInputMask, TextInputMaskTypeProp, TextInputMaskOptionProp } from 'react-native-masked-text'
 /**
  * ? Local Imports
  */
@@ -31,7 +30,8 @@ export interface ISearchBarProps
     TextInputProps {
   darkMode?: boolean;
   placeholder?: string;
-  mask?: string;
+  type?: TextInputMaskTypeProp;
+  options?:  TextInputMaskOptionProp;
   ImageComponent?: any;
   spinnerType?: string;
   spinnerSize?: number;
@@ -45,6 +45,12 @@ export interface ISearchBarProps
   textInputStyle?: TextStyle | Array<TextStyle>;
   searchIconImageStyle?: ImageStyle | Array<ImageStyle>;
   clearIconImageStyle?: ImageStyle | Array<ImageStyle>;
+  customTextInput?: any
+  customTextInputProps?: Object
+  includeRawValueInChangeText?: boolean
+  checkText?: (previous: string, next: string) => boolean
+  onChangeText?: (text: string, rawText?: string) => void
+  refInput?: (ref: any) => void
   onBlur?: () => void;
   onFocus?: () => void;
   onPress?: () => void;
@@ -58,14 +64,16 @@ export default class SearchBar extends React.Component<
   ISearchBarProps,
   IState
 > {
-  inputRef: TextInput | null = null;
+  inputRef: TextInput | TextInputMask | null = null;
 
   handleSearchBarPress = () => {
+    // @ts-ignore
     this.inputRef?.focus();
     this.props.onPress && this.props.onPress();
   };
 
   handleOnClearPress = () => {
+    // @ts-ignore
     this.inputRef?.clear();
     this.props.onClearPress && this.props.onClearPress();
   };
@@ -119,29 +127,27 @@ export default class SearchBar extends React.Component<
 
   renderTextInput = () => {
     const {
-      mask,
+      type,
+      options,
       onBlur,
       onFocus,
       textInputStyle,
       darkMode = false,
       placeholder = "Search here...",
     } = this.props;
-
-    const InputComponent = <TextInput
-      placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"}
-      {...this.props}
-      onBlur={onBlur}
-      onFocus={onFocus}
-      ref={(ref) => (this.inputRef = ref)}
-      style={[_textInputStyle(darkMode), textInputStyle]}
-      placeholder={placeholder}
-    />
-
-    const IMaskTextInput = IMaskNativeMixin(InputComponent);
     
     return (
-      <IMaskTextInput
-        mask={mask}
+      <TextInputMask
+       // @ts-ignore
+        type={type}
+        options={options}
+        placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"}
+        {...this.props}
+        onBlur={onBlur}
+        onFocus={onFocus}
+        ref={(ref) => (this.inputRef = ref)}
+        style={[_textInputStyle(darkMode), textInputStyle]}
+        placeholder={placeholder}
       />
     );
   };

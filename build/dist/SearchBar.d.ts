@@ -1,5 +1,6 @@
 import * as React from "react";
 import { TextInput, ViewStyle, TextStyle, ImageStyle, TextInputProps, TouchableWithoutFeedbackProps } from "react-native";
+import { TextInputMask, TextInputMaskTypeProp, TextInputMaskOptionProp } from 'react-native-masked-text';
 export interface ISource {
     source: string | {
         uri: string;
@@ -8,7 +9,8 @@ export interface ISource {
 export interface ISearchBarProps extends TouchableWithoutFeedbackProps, TextInputProps {
     darkMode?: boolean;
     placeholder?: string;
-    mask?: string;
+    type?: TextInputMaskTypeProp;
+    options?: TextInputMaskOptionProp;
     ImageComponent?: any;
     spinnerType?: string;
     spinnerSize?: number;
@@ -22,6 +24,12 @@ export interface ISearchBarProps extends TouchableWithoutFeedbackProps, TextInpu
     textInputStyle?: TextStyle | Array<TextStyle>;
     searchIconImageStyle?: ImageStyle | Array<ImageStyle>;
     clearIconImageStyle?: ImageStyle | Array<ImageStyle>;
+    customTextInput?: any;
+    customTextInputProps?: Object;
+    includeRawValueInChangeText?: boolean;
+    checkText?: (previous: string, next: string) => boolean;
+    onChangeText?: (text: string, rawText?: string) => void;
+    refInput?: (ref: any) => void;
     onBlur?: () => void;
     onFocus?: () => void;
     onPress?: () => void;
@@ -31,7 +39,7 @@ export interface ISearchBarProps extends TouchableWithoutFeedbackProps, TextInpu
 interface IState {
 }
 export default class SearchBar extends React.Component<ISearchBarProps, IState> {
-    inputRef: TextInput | null;
+    inputRef: TextInput | TextInputMask | null;
     handleSearchBarPress: () => void;
     handleOnClearPress: () => void;
     renderSpinner: () => JSX.Element;

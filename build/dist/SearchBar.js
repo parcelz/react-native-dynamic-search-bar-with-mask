@@ -5,7 +5,7 @@ const React = tslib_1.__importStar(require("react"));
 const react_native_1 = require("react-native");
 const react_native_spinkit_1 = tslib_1.__importDefault(require("react-native-spinkit"));
 const react_native_bounceable_1 = tslib_1.__importDefault(require("@freakycoder/react-native-bounceable"));
-const react_native_imask_1 = require("react-native-imask");
+const react_native_masked_text_1 = require("react-native-masked-text");
 /**
  * ? Local Imports
  */
@@ -19,10 +19,12 @@ class SearchBar extends React.Component {
         super(...arguments);
         this.inputRef = null;
         this.handleSearchBarPress = () => {
+            // @ts-ignore
             this.inputRef?.focus();
             this.props.onPress && this.props.onPress();
         };
         this.handleOnClearPress = () => {
+            // @ts-ignore
             this.inputRef?.clear();
             this.props.onClearPress && this.props.onClearPress();
         };
@@ -44,10 +46,10 @@ class SearchBar extends React.Component {
       </react_native_bounceable_1.default>);
         };
         this.renderTextInput = () => {
-            const { mask, onBlur, onFocus, textInputStyle, darkMode = false, placeholder = "Search here...", } = this.props;
-            const InputComponent = <react_native_1.TextInput placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"} {...this.props} onBlur={onBlur} onFocus={onFocus} ref={(ref) => (this.inputRef = ref)} style={[SearchBar_style_1._textInputStyle(darkMode), textInputStyle]} placeholder={placeholder}/>;
-            const IMaskTextInput = react_native_imask_1.IMaskNativeMixin(InputComponent);
-            return (<IMaskTextInput mask={mask}/>);
+            const { type, options, onBlur, onFocus, textInputStyle, darkMode = false, placeholder = "Search here...", } = this.props;
+            return (<react_native_masked_text_1.TextInputMask 
+            // @ts-ignore
+            type={type} options={options} placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"} {...this.props} onBlur={onBlur} onFocus={onFocus} ref={(ref) => (this.inputRef = ref)} style={[SearchBar_style_1._textInputStyle(darkMode), textInputStyle]} placeholder={placeholder}/>);
         };
         this.renderClearIcon = () => {
             const { darkMode = false, clearIconComponent, clearIconImageStyle, ImageComponent = react_native_1.Image, clearIconImageSource = darkMode ? whiteClearIcon : defaultClearIcon, } = this.props;
