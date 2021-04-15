@@ -1,6 +1,6 @@
 import * as React from "react";
 import { TextInput, ViewStyle, TextStyle, ImageStyle, TextInputProps, TouchableWithoutFeedbackProps } from "react-native";
-import { TextInputMask, TextInputMaskTypeProp, TextInputMaskOptionProp } from 'react-native-masked-text';
+import { TextInputMask, TextInputMaskOptionProp } from 'react-native-masked-text';
 export interface ISource {
     source: string | {
         uri: string;
@@ -9,8 +9,9 @@ export interface ISource {
 export interface ISearchBarProps extends TouchableWithoutFeedbackProps, TextInputProps {
     darkMode?: boolean;
     placeholder?: string;
-    type?: TextInputMaskTypeProp;
+    type?: any;
     options?: TextInputMaskOptionProp;
+    value: any;
     ImageComponent?: any;
     spinnerType?: string;
     spinnerSize?: number;

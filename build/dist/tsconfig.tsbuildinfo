@@ -137,8 +137,8 @@
         "affectsGlobalScope": false
       },
       "../../lib/searchbar.tsx": {
-        "version": "3253aa04e7b8e145172117742cf36f73ee627379eb60d5b2b321bf6d388c4ef0",
-        "signature": "ce5add6044c152f3f67b2ab76fafc8f3434958ea3be243af2d882a49b0831223",
+        "version": "f8d278575e90b9df719c0c3c090d3201ddbc240b8d9fc4f875688ebcf0904b5c",
+        "signature": "f1a793378ceabc9c8afcbaed44c22c552f9029f3bbd22059bdf1b072303f121a",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/eslint-visitor-keys/index.d.ts": {

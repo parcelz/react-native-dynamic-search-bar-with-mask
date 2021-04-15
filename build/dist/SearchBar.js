@@ -19,13 +19,11 @@ class SearchBar extends React.Component {
         super(...arguments);
         this.inputRef = null;
         this.handleSearchBarPress = () => {
-            // @ts-ignore
-            this.inputRef?.focus();
+            // this.inputRef?.focus();
             this.props.onPress && this.props.onPress();
         };
         this.handleOnClearPress = () => {
-            // @ts-ignore
-            this.inputRef?.clear();
+            // this.inputRef?.clear();
             this.props.onClearPress && this.props.onClearPress();
         };
         /* -------------------------------------------------------------------------- */
@@ -47,9 +45,7 @@ class SearchBar extends React.Component {
         };
         this.renderTextInput = () => {
             const { type, options, onBlur, onFocus, textInputStyle, darkMode = false, placeholder = "Search here...", } = this.props;
-            return (<react_native_masked_text_1.TextInputMask 
-            // @ts-ignore
-            type={type} options={options} placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"} {...this.props} onBlur={onBlur} onFocus={onFocus} ref={(ref) => (this.inputRef = ref)} style={[SearchBar_style_1._textInputStyle(darkMode), textInputStyle]} placeholder={placeholder}/>);
+            return (<react_native_masked_text_1.TextInputMask type={type} options={options} placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"} {...this.props} onBlur={onBlur} onFocus={onFocus} ref={(ref) => (this.inputRef = ref)} style={[SearchBar_style_1._textInputStyle(darkMode), textInputStyle]} placeholder={placeholder}/>);
         };
         this.renderClearIcon = () => {
             const { darkMode = false, clearIconComponent, clearIconImageStyle, ImageComponent = react_native_1.Image, clearIconImageSource = darkMode ? whiteClearIcon : defaultClearIcon, } = this.props;
