@@ -56,10 +56,30 @@
         "signature": "9d122b7e8c1a5c72506eea50c0973cba55b92b5532d5cafa8a6ce2c547d57551",
         "affectsGlobalScope": true
       },
-      "../../node_modules/tslib/tslib.d.ts": {
-        "version": "4576b4e61049f5ffd7c9e935cf88832e089265bdb15ffc35077310042cbbbeea",
-        "signature": "4576b4e61049f5ffd7c9e935cf88832e089265bdb15ffc35077310042cbbbeea",
+      "../../node_modules/@types/react/global.d.ts": {
+        "version": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
+        "signature": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
+        "affectsGlobalScope": true
+      },
+      "../../node_modules/csstype/index.d.ts": {
+        "version": "0a6f28e1d77b99b0ef7da2f0bf50f301ea8a7eb7b4f573e458e725452a477bd2",
+        "signature": "0a6f28e1d77b99b0ef7da2f0bf50f301ea8a7eb7b4f573e458e725452a477bd2",
         "affectsGlobalScope": false
+      },
+      "../../node_modules/@types/prop-types/index.d.ts": {
+        "version": "a7e32dcb90bf0c1b7a1e4ac89b0f7747cbcba25e7beddc1ebf17be1e161842ad",
+        "signature": "a7e32dcb90bf0c1b7a1e4ac89b0f7747cbcba25e7beddc1ebf17be1e161842ad",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@types/scheduler/tracing.d.ts": {
+        "version": "f5a8b384f182b3851cec3596ccc96cb7464f8d3469f48c74bf2befb782a19de5",
+        "signature": "f5a8b384f182b3851cec3596ccc96cb7464f8d3469f48c74bf2befb782a19de5",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/@types/react/index.d.ts": {
+        "version": "5d708266116e778d6a4140fca2ac36f71d99b4c68bc3be63a45ba8bf5ade5348",
+        "signature": "5d708266116e778d6a4140fca2ac36f71d99b4c68bc3be63a45ba8bf5ade5348",
+        "affectsGlobalScope": true
       },
       "../../node_modules/@types/react-native/globals.d.ts": {
         "version": "44ae1263bb526f9f08419f9532e10d39b9cca5564f0481362ce8b4cbf1def8d9",
@@ -86,39 +106,24 @@
         "signature": "234b97ac9af46707f2315ff395a9b340d37b7dbc8290d91f5d6bd97189d220f3",
         "affectsGlobalScope": false
       },
-      "../../node_modules/@types/react/global.d.ts": {
-        "version": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
-        "signature": "ecf78e637f710f340ec08d5d92b3f31b134a46a4fcf2e758690d8c46ce62cba6",
-        "affectsGlobalScope": true
-      },
-      "../../node_modules/csstype/index.d.ts": {
-        "version": "0a6f28e1d77b99b0ef7da2f0bf50f301ea8a7eb7b4f573e458e725452a477bd2",
-        "signature": "0a6f28e1d77b99b0ef7da2f0bf50f301ea8a7eb7b4f573e458e725452a477bd2",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/prop-types/index.d.ts": {
-        "version": "a7e32dcb90bf0c1b7a1e4ac89b0f7747cbcba25e7beddc1ebf17be1e161842ad",
-        "signature": "a7e32dcb90bf0c1b7a1e4ac89b0f7747cbcba25e7beddc1ebf17be1e161842ad",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/scheduler/tracing.d.ts": {
-        "version": "f5a8b384f182b3851cec3596ccc96cb7464f8d3469f48c74bf2befb782a19de5",
-        "signature": "f5a8b384f182b3851cec3596ccc96cb7464f8d3469f48c74bf2befb782a19de5",
-        "affectsGlobalScope": false
-      },
-      "../../node_modules/@types/react/index.d.ts": {
-        "version": "5d708266116e778d6a4140fca2ac36f71d99b4c68bc3be63a45ba8bf5ade5348",
-        "signature": "5d708266116e778d6a4140fca2ac36f71d99b4c68bc3be63a45ba8bf5ade5348",
-        "affectsGlobalScope": true
-      },
       "../../node_modules/@types/react-native/index.d.ts": {
         "version": "27aa0d8da2c9398f466b796c3eeba67393ae53cc626b9f7150fdcca59f14ead9",
         "signature": "27aa0d8da2c9398f466b796c3eeba67393ae53cc626b9f7150fdcca59f14ead9",
         "affectsGlobalScope": true
       },
-      "../../lib/searchbar.style.ts": {
-        "version": "e5fd594ec65c56c30524cc8fb95f95b5fa50e00907867af4efcdc9cf3a166b08",
-        "signature": "039b357425fd5553cba71752b0e6dcb2734c1859d780a29acee6b22e96cf2a62",
+      "../../node_modules/react-native-masked-text/index.d.ts": {
+        "version": "49324857a6886198a3546f71377b4c1e85e8b8de7125d43eae212554376773be",
+        "signature": "49324857a6886198a3546f71377b4c1e85e8b8de7125d43eae212554376773be",
+        "affectsGlobalScope": false
+      },
+      "./searchbar.d.ts": {
+        "version": "f1a793378ceabc9c8afcbaed44c22c552f9029f3bbd22059bdf1b072303f121a",
+        "signature": "f1a793378ceabc9c8afcbaed44c22c552f9029f3bbd22059bdf1b072303f121a",
+        "affectsGlobalScope": false
+      },
+      "../../node_modules/tslib/tslib.d.ts": {
+        "version": "4576b4e61049f5ffd7c9e935cf88832e089265bdb15ffc35077310042cbbbeea",
+        "signature": "4576b4e61049f5ffd7c9e935cf88832e089265bdb15ffc35077310042cbbbeea",
         "affectsGlobalScope": false
       },
       "../../node_modules/react-native-spinkit/index.d.ts": {
@@ -131,14 +136,29 @@
         "signature": "6e1c6f7fb7bb235b8bbe5e81b354a50dceed6b1a1c958886daee0de7bdf97dfa",
         "affectsGlobalScope": false
       },
-      "../../node_modules/react-native-masked-text/index.d.ts": {
-        "version": "49324857a6886198a3546f71377b4c1e85e8b8de7125d43eae212554376773be",
-        "signature": "49324857a6886198a3546f71377b4c1e85e8b8de7125d43eae212554376773be",
+      "./searchbar.style.d.ts": {
+        "version": "039b357425fd5553cba71752b0e6dcb2734c1859d780a29acee6b22e96cf2a62",
+        "signature": "039b357425fd5553cba71752b0e6dcb2734c1859d780a29acee6b22e96cf2a62",
+        "affectsGlobalScope": false
+      },
+      "./searchbar.js": {
+        "version": "3d52f6720f7cb80aa4a7db58ce650f6d0c935bc99aa5b11573aadd32cfc3d644",
+        "signature": "1ddf0e970f1f0a1ce4bc25d7cbe8e0f00f5b1f23e12989c93390f89611e49619",
+        "affectsGlobalScope": true
+      },
+      "./searchbar.style.js": {
+        "version": "7ca8738b0f6271cacbfc4f933f4f64d2ec17ae02b7907dab09410729a0c80222",
+        "signature": "ed77cfd872ca1a8912e6c012f0402368ec158981e31a521d618ca4cfa85c5fd4",
+        "affectsGlobalScope": true
+      },
+      "../../lib/searchbar.style.ts": {
+        "version": "e5fd594ec65c56c30524cc8fb95f95b5fa50e00907867af4efcdc9cf3a166b08",
+        "signature": "039b357425fd5553cba71752b0e6dcb2734c1859d780a29acee6b22e96cf2a62",
         "affectsGlobalScope": false
       },
       "../../lib/searchbar.tsx": {
-        "version": "f8d278575e90b9df719c0c3c090d3201ddbc240b8d9fc4f875688ebcf0904b5c",
-        "signature": "f1a793378ceabc9c8afcbaed44c22c552f9029f3bbd22059bdf1b072303f121a",
+        "version": "178ee3171be8b29f7b73a5f0b23ece0cbb798dac385216c98ae7186a1f63d8f2",
+        "signature": "dab5139938c5b4c65cc374a4421f3a3c97c4444df1e898d664dfeffec7c6b1a3",
         "affectsGlobalScope": false
       },
       "../../node_modules/@types/eslint-visitor-keys/index.d.ts": {
@@ -188,6 +208,27 @@
       "configFilePath": "../../tsconfig.json"
     },
     "referencedMap": {
+      "./searchbar.d.ts": [
+        "../../node_modules/@types/react-native/index.d.ts",
+        "../../node_modules/@types/react/index.d.ts",
+        "../../node_modules/react-native-masked-text/index.d.ts"
+      ],
+      "./searchbar.js": [
+        "../../node_modules/@freakycoder/react-native-bounceable/build/dist/rnbounceable.d.ts",
+        "../../node_modules/@types/react-native/index.d.ts",
+        "../../node_modules/@types/react/index.d.ts",
+        "../../node_modules/react-native-masked-text/index.d.ts",
+        "../../node_modules/react-native-spinkit/index.d.ts",
+        "../../node_modules/tslib/tslib.d.ts",
+        "./searchbar.style.d.ts"
+      ],
+      "./searchbar.style.d.ts": [
+        "../../node_modules/@types/react-native/index.d.ts"
+      ],
+      "./searchbar.style.js": [
+        "../../node_modules/@types/react-native/index.d.ts",
+        "../../node_modules/tslib/tslib.d.ts"
+      ],
       "../../lib/searchbar.style.ts": [
         "../../node_modules/@types/react-native/index.d.ts",
         "../../node_modules/tslib/tslib.d.ts"
@@ -235,6 +276,14 @@
       ]
     },
     "exportedModulesMap": {
+      "./searchbar.d.ts": [
+        "../../node_modules/@types/react-native/index.d.ts",
+        "../../node_modules/@types/react/index.d.ts",
+        "../../node_modules/react-native-masked-text/index.d.ts"
+      ],
+      "./searchbar.style.d.ts": [
+        "../../node_modules/@types/react-native/index.d.ts"
+      ],
       "../../lib/searchbar.style.ts": [
         "../../node_modules/@types/react-native/index.d.ts"
       ],
@@ -277,6 +326,10 @@
       ]
     },
     "semanticDiagnosticsPerFile": [
+      "./searchbar.d.ts",
+      "./searchbar.js",
+      "./searchbar.style.d.ts",
+      "./searchbar.style.js",
       "../../lib/searchbar.style.ts",
       "../../lib/searchbar.tsx",
       "../../node_modules/@freakycoder/react-native-bounceable/build/dist/rnbounceable.d.ts",
