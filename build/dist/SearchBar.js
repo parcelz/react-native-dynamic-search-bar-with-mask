@@ -44,11 +44,11 @@ class SearchBar extends React.Component {
       </react_native_bounceable_1.default>);
         };
         this.renderTextInput = () => {
-            const { type, options, onBlur, onFocus, textInputStyle, darkMode = false, withMask = false, placeholder = "Search here...", } = this.props;
+            const { type, options, onBlur, onFocus, textInputStyle, darkMode = false, withMask = false, keyboardType = 'default', autoCapitalize = 'none', placeholder = "Search here...", } = this.props;
             if (withMask) {
-                return (<react_native_masked_text_1.TextInputMask type={type} options={options} autoCapitalize="characters" placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"} {...this.props} onBlur={onBlur} onFocus={onFocus} ref={(ref) => (this.inputRef = ref)} style={[SearchBar_style_1._textInputStyle(darkMode), textInputStyle]} placeholder={placeholder}/>);
+                return (<react_native_masked_text_1.TextInputMask type={type} options={options} autoCapitalize={autoCapitalize} keyboardType={keyboardType} placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"} {...this.props} onBlur={onBlur} onFocus={onFocus} ref={(ref) => (this.inputRef = ref)} style={[SearchBar_style_1._textInputStyle(darkMode), textInputStyle]} placeholder={placeholder}/>);
             }
-            return (<react_native_1.TextInput autoCapitalize="characters" placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"} {...this.props} onBlur={onBlur} onFocus={onFocus} ref={(ref) => (this.inputRef = ref)} style={[SearchBar_style_1._textInputStyle(darkMode), textInputStyle]} placeholder={placeholder}/>);
+            return (<react_native_1.TextInput autoCapitalize={autoCapitalize} keyboardType={keyboardType} placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"} {...this.props} onBlur={onBlur} onFocus={onFocus} ref={(ref) => (this.inputRef = ref)} style={[SearchBar_style_1._textInputStyle(darkMode), textInputStyle]} placeholder={placeholder}/>);
         };
         this.renderClearIcon = () => {
             const { darkMode = false, clearIconComponent, clearIconImageStyle, ImageComponent = react_native_1.Image, clearIconImageSource = darkMode ? whiteClearIcon : defaultClearIcon, } = this.props;

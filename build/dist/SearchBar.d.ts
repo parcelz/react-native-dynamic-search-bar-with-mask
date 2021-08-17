@@ -1,5 +1,5 @@
 import * as React from "react";
-import { TextInput, ViewStyle, TextStyle, ImageStyle, TextInputProps, TouchableWithoutFeedbackProps } from "react-native";
+import { TextInput, ViewStyle, TextStyle, ImageStyle, TextInputProps, TouchableWithoutFeedbackProps, KeyboardTypeOptions } from "react-native";
 import { TextInputMask, TextInputMaskOptionProp } from 'react-native-masked-text';
 export interface ISource {
     source: string | {
@@ -13,6 +13,8 @@ export interface ISearchBarProps extends TouchableWithoutFeedbackProps, TextInpu
     type?: any;
     options?: TextInputMaskOptionProp;
     value: any;
+    keyboardType?: KeyboardTypeOptions | undefined;
+    autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined;
     ImageComponent?: any;
     spinnerType?: string;
     spinnerSize?: number;

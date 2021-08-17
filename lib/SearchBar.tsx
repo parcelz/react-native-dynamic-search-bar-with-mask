@@ -8,6 +8,7 @@ import {
   ImageStyle,
   TextInputProps,
   TouchableWithoutFeedbackProps,
+  KeyboardTypeOptions
 } from "react-native";
 import Spinner from "react-native-spinkit";
 import RNBounceable from "@freakycoder/react-native-bounceable";
@@ -34,6 +35,8 @@ export interface ISearchBarProps
   type?: any;
   options?:  TextInputMaskOptionProp;
   value: any;
+  keyboardType?: KeyboardTypeOptions | undefined;
+  autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined;
   ImageComponent?: any;
   spinnerType?: string;
   spinnerSize?: number;
@@ -134,6 +137,8 @@ export default class SearchBar extends React.Component<
       textInputStyle,
       darkMode = false,
       withMask = false,
+      keyboardType = 'default',
+      autoCapitalize = 'none',
       placeholder = "Search here...",
     } = this.props;
     
@@ -142,7 +147,8 @@ export default class SearchBar extends React.Component<
         <TextInputMask
           type={type}
           options={options}
-          autoCapitalize="characters"
+          autoCapitalize={autoCapitalize}
+          keyboardType={keyboardType}
           placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"}
           {...this.props}
           onBlur={onBlur}
@@ -156,7 +162,8 @@ export default class SearchBar extends React.Component<
     
     return (
       <TextInput
-        autoCapitalize="characters"
+        autoCapitalize={autoCapitalize}
+        keyboardType={keyboardType}
         placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"}
         {...this.props}
         onBlur={onBlur}
