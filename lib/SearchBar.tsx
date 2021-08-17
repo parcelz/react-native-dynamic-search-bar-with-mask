@@ -29,6 +29,7 @@ export interface ISearchBarProps
   extends TouchableWithoutFeedbackProps,
     TextInputProps {
   darkMode?: boolean;
+  withMask?: boolean;
   placeholder?: string;
   type?: any;
   options?:  TextInputMaskOptionProp;
@@ -132,13 +133,30 @@ export default class SearchBar extends React.Component<
       onFocus,
       textInputStyle,
       darkMode = false,
+      withMask = false,
       placeholder = "Search here...",
     } = this.props;
     
+    if(withMask){
+      return (
+        <TextInputMask
+          type={type}
+          options={options}
+          autoCapitalize="characters"
+          placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"}
+          {...this.props}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          ref={(ref) => (this.inputRef = ref)}
+          style={[_textInputStyle(darkMode), textInputStyle]}
+          placeholder={placeholder}
+        />
+      );
+    }
+    
     return (
-      <TextInputMask
-        type={type}
-        options={options}
+      <TextInput
+        autoCapitalize="characters"
         placeholderTextColor={darkMode ? "#fdfdfd" : "#19191a"}
         {...this.props}
         onBlur={onBlur}
