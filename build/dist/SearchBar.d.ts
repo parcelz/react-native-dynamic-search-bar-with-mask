@@ -8,6 +8,7 @@ export interface ISource {
 }
 export interface ISearchBarProps extends TouchableWithoutFeedbackProps, TextInputProps {
     darkMode?: boolean;
+    withMask?: boolean;
     placeholder?: string;
     type?: any;
     options?: TextInputMaskOptionProp;
