@@ -81,6 +81,16 @@ export default class SearchBar extends React.Component<
     this.props.onClearPress && this.props.onClearPress();
   };
 
+  focus = () => {
+    if(this.props.withMask){
+      this.inputRef!['_inputElement'].focus();
+      return;
+    }
+    
+    this.inputRef!['focus']();
+  
+  };
+
   /* -------------------------------------------------------------------------- */
   /*                               Render Methods                               */
   /* -------------------------------------------------------------------------- */

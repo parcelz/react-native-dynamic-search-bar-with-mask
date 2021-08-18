@@ -46,6 +46,7 @@ export default class SearchBar extends React.Component<ISearchBarProps, IState> 
     inputRef: TextInput | TextInputMask | null;
     handleSearchBarPress: () => void;
     handleOnClearPress: () => void;
+    focus: () => void;
     renderSpinner: () => JSX.Element;
     renderSearchIcon: () => JSX.Element;
     renderTextInput: () => JSX.Element;

@@ -26,6 +26,13 @@ class SearchBar extends React.Component {
             // this.inputRef?.clear();
             this.props.onClearPress && this.props.onClearPress();
         };
+        this.focus = () => {
+            if (this.props.withMask) {
+                this.inputRef['_inputElement'].focus();
+                return;
+            }
+            this.inputRef['focus']();
+        };
         /* -------------------------------------------------------------------------- */
         /*                               Render Methods                               */
         /* -------------------------------------------------------------------------- */
