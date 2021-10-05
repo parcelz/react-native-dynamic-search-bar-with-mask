@@ -32,6 +32,7 @@ export interface ISearchBarProps
   darkMode?: boolean;
   withMask?: boolean;
   placeholder?: string;
+  selectionColor?: string;
   type?: any;
   options?:  TextInputMaskOptionProp;
   value: any;
@@ -150,6 +151,7 @@ export default class SearchBar extends React.Component<
       keyboardType = 'default',
       autoCapitalize = 'none',
       placeholder = "Search here...",
+      selectionColor = "#FFF",
     } = this.props;
     
     if(withMask){
@@ -166,6 +168,7 @@ export default class SearchBar extends React.Component<
           ref={(ref) => (this.inputRef = ref)}
           style={[_textInputStyle(darkMode), textInputStyle]}
           placeholder={placeholder}
+          selectionColor={selectionColor}
         />
       );
     }
@@ -181,6 +184,7 @@ export default class SearchBar extends React.Component<
         ref={(ref) => (this.inputRef = ref)}
         style={[_textInputStyle(darkMode), textInputStyle]}
         placeholder={placeholder}
+        selectionColor={selectionColor}
       />
     );
   };
